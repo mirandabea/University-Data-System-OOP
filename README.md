@@ -1,5 +1,10 @@
 # University-Data-System-OOP
 Projeto de Desenvolvimento de Sistemas Orientado a Objetos focado na modelagem e gestão eficiente dos dados acadêmicos e administrativos de uma grande instituição de ensino superior.
+# Sistema de Dados Universitários POO
+
+Projeto de Desenvolvimento de Sistemas Orientado a Objetos focado na modelagem e gestão eficiente de dados acadêmicos e administrativos de uma grande instituição de ensino superior.
+
+---
 
 ## 1. Introdução e Visão Geral da Solução (PI - Fase 1)
 
@@ -25,44 +30,71 @@ A modelagem de casos de uso representa os cenários de cadastro de diferentes ti
 
 ---
 
-## 3. Descrição dos Cenários (Casos de Uso)
+## 3. Descrição Detalhada dos Cenários (Casos de Uso)
 
 ### 3.1. Caso de Uso 1: Cadastro de Pessoa Física
 
 * **Ator Principal:** Funcionário responsável pelo cadastro.
-* **Pré-condição:** O sistema deve estar em funcionamento e o usuário (funcionário) deve estar autenticado.
-* **Cenário Principal:** O funcionário acessa o cadastro, preenche os dados obrigatórios, o sistema valida os dados, registra no banco e exibe mensagem de sucesso.
+* **Pré-condição:** O sistema deve estar em funcionamento, e o usuário (funcionário) deve estar autenticado no sistema.
+* **Cenário Principal:**
+    1. O funcionário acessa a funcionalidade "Cadastro de Pessoa Física".
+    2. O sistema exibe o formulário de cadastro de pessoa física.
+    3. O funcionário preenche os dados obrigatórios: Nome, CPF, RG, Endereço, Telefone, E-mail e Data de Nascimento.
+    4. O sistema valida os dados informados (ex.: CPF válido e não duplicado).
+    5. O funcionário confirma a operação.
+    6. O sistema registra os dados no banco de dados.
+    7. O sistema exibe mensagem de sucesso e disponibiliza a visualização do cadastro realizado.
 * **Cenário Alternativo 1:** No passo 4, se o CPF informado for inválido ou já estiver cadastrado, o sistema informa o erro e solicita a correção.
-* **Cenário Alternativo 2:** No passo 3, se o funcionário não preencher todos os campos obrigatórios, o sistema alerta sobre os campos faltantes e impede a conclusão.
-* **Pós-condição:** Os dados da pessoa física são armazenados, ficando disponíveis para consultas e relacionamentos futuros (ex.: vínculo como aluno ou professor).
+* **Cenário Alternativo 2:** No passo 3, se o funcionário não preencher todos os campos obrigatórios, o sistema alerta sobre os campos faltantes e impede a conclusão do cadastro.
+* **Pós-condição:** Os dados da pessoa física são armazenados no sistema, ficando disponíveis para consultas e relacionamentos futuros (ex.: vínculo como aluno ou professor).
 
 ### 3.2. Caso de Uso 2: Cadastro de Pessoa Jurídica
 
 * **Ator Principal:** Funcionário responsável pelo cadastro.
-* **Pré-condição:** O sistema deve estar em funcionamento e o funcionário deve estar autenticado.
-* **Cenário Principal:** O funcionário preenche os dados obrigatórios (Razão Social, Nome Fantasia, CNPJ, Endereço, Telefone e E-mail), o sistema valida e registra no banco, exibindo mensagem de sucesso.
-* **Cenário Alternativo 1:** Se o CNPJ informado for inválido ou já estiver cadastrado, o sistema informa o erro e solicita a correção.
-* **Cenário Alternativo 2:** Se o funcionário não preencher todos os campos obrigatórios, o sistema alerta e impede a conclusão do cadastro.
-* **Pós-condição:** Os dados da pessoa jurídica são armazenados, ficando disponíveis para consultas e relacionamentos futuros (ex.: vínculo como fornecedor).
+* **Pré-condição:** O sistema deve estar em funcionamento, e o usuário (funcionário) deve estar autenticado no sistema.
+* **Cenário Principal:**
+    1. O funcionário acessa a funcionalidade “Cadastro de Pessoa Jurídica”.
+    2. O sistema exibe o formulário de cadastro de pessoa jurídica.
+    3. O funcionário preenche os dados obrigatórios: Razão Social, Nome Fantasia, CNPJ, Endereço, Telefone e E-mail.
+    4. O sistema valida os dados informados (ex.: CNPJ válido e não duplicado).
+    5. O funcionário confirma a operação.
+    6. O sistema registra os dados no banco de dados.
+    7. O sistema exibe mensagem de sucesso e disponibiliza a visualização do cadastro realizado.
+* **Cenário Alternativo 1:** No passo 4, se o CNPJ informado for inválido ou já estiver cadastrado, o sistema informa o erro e solicita a correção.
+* **Cenário Alternativo 2:** No passo 3, se o funcionário não preencher todos os campos obrigatórios, o sistema alerta sobre os campos faltantes e impede a conclusão do cadastro.
+* **Pós-condição:** Os dados da pessoa jurídica são armazenados no sistema, ficando disponíveis para consultas e relacionamentos futuros (ex.: vínculo como fornecedor).
 
 ### 3.3. Caso de Uso 3: Cadastro de Usuários (Alunos e Professores)
 
 * **Ator Principal:** Administrador do Sistema.
-* **Pré-condição:** O Administrador deve estar autenticado e possuir privilégios de acesso.
-* **Cenário Principal (Passos Chave):** O Administrador insere os dados pessoais obrigatórios, seleciona o perfil (Aluno ou Professor), preenche os campos adicionais do perfil. O sistema valida, cria o registro de Pessoa Física e associa o perfil.
-* **Cenário Alternativo 1 (Cadastro de Perfil em Pessoa Física existente):** O Administrador localiza uma Pessoa já cadastrada, o sistema disponibiliza apenas os campos específicos para o novo perfil, e associa o perfil ao registro existente.
-* **Cenário Alternativo 2 (Campos Obrigatórios não preenchidos):** O sistema detecta os campos ausentes, interrompe a operação e exibe mensagem de erro.
-* **Cenário Alternativo 3 (Cadastro duplicado):** O Administrador tenta cadastrar um CPF já presente na base, o sistema rejeita a operação e exibe mensagem de duplicidade.
+* **Pré-condição:** O Administrador do Sistema deve estar autenticado, possuir privilégios de acesso e o sistema deve estar devidamente conectado ao banco de dados.
+* **Cenário Principal:**
+    1. O Administrador acessa a funcionalidade de cadastro de usuários.
+    2. O sistema apresenta a opção de iniciar um novo cadastro de Pessoa Física.
+    3. O Administrador insere os dados pessoais obrigatórios.
+    4. O Administrador seleciona o perfil do novo usuário (Aluno ou Professor).
+    5. O sistema exibe os campos adicionais correspondentes ao perfil escolhido.
+    6. O Administrador preenche os campos adicionais e confirma a operação.
+    7. O sistema executa a validação das informações fornecidas.
+    8. Se os dados forem válidos, o sistema cria o registro da Pessoa Física e associa o perfil selecionado.
+    9. O sistema exibe mensagem de confirmação e retorna à tela inicial de cadastro.
+* **Cenário Alternativo 1 (Cadastro de Perfil em Pessoa Física existente):** O Administrador localiza uma Pessoa já cadastrada, e o sistema disponibiliza apenas os campos específicos para o novo perfil, validando e associando o perfil ao registro existente.
+* **Cenário Alternativo 2 (Campos Obrigatórios não preenchidos):** O sistema detecta os campos ausentes, interrompe a operação e exibe mensagem de erro, permitindo a correção.
+* **Cenário Alternativo 3 (Cadastro duplicado):** O Administrador tenta cadastrar um CPF já presente, o sistema rejeita a operação, exibe mensagem de duplicidade, e o formulário continua disponível para ajustes.
 * **Cenário Alternativo 4 (Permissão insuficiente):** Um usuário sem perfil de Administrador tenta acessar, o sistema bloqueia o acesso e exibe “Acesso negado”.
 * **Pós-condição (Sucesso):** Um novo registro de Pessoa Física (quando aplicável) e o respectivo perfil são criados no banco de dados.
 
 ### 3.4. Caso de Uso 4: Cadastro de Fornecedor
 
 * **Ator Principal:** Funcionário do Setor Administrativo.
-* **Pré-condição:** O funcionário deve estar autenticado e o sistema conectado ao banco de dados.
-* **Cenário Principal:** O funcionário insere informações obrigatórias (Razão social, CNPJ, Endereço, Telefone de contato, E-mail e Tipo de fornecimento). O sistema valida, armazena e apresenta mensagem de sucesso.
-* **Cenário Alternativo 1 (Dados incompletos):** O sistema exibe uma mensagem de erro informando os campos que ainda precisam ser preenchidos.
-* **Cenário Alternativo 2 (CNPJ inválido ou duplicado):** O sistema bloqueia o cadastro e informa o motivo do erro.
+* **Pré-condição:** O funcionário deve estar autenticado no sistema, e o sistema deve estar conectado ao banco de dados.
+* **Cenário Principal:**
+    1. O funcionário acessa o sistema de gestão da universidade e seleciona a opção “Cadastro de Fornecedores”.
+    2. O sistema apresenta a tela de cadastro e o funcionário insere as informações obrigatórias (Razão social, CNPJ, Endereço, Telefone de contato, E-mail e Tipo de fornecimento).
+    3. O funcionário confirma o cadastro.
+    4. O sistema valida os dados, armazena as informações e apresenta uma mensagem de sucesso.
+* **Cenário Alternativo 1 (Dados incompletos):** Se o funcionário não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro informando os campos que ainda precisam ser preenchidos.
+* **Cenário Alternativo 2 (CNPJ inválido ou duplicado):** Caso o funcionário insira um CNPJ em formato inválido ou que já exista no sistema, o sistema bloqueia o cadastro e informa o motivo do erro.
 * **Pós-condição:** O fornecedor é registrado no sistema e fica disponível para consultas e edições futuras.
 
 ---
