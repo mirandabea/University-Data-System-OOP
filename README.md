@@ -25,7 +25,7 @@ A modelagem de casos de uso representa os cenários de cadastro de diferentes ti
 
 ---
 
-## 3. Descrição Detalhada dos Cenários (Casos de Uso)
+## 3. Descrição dos Cenários (Casos de Uso)
 
 ### 3.1. Caso de Uso 1: Cadastro de Pessoa Física
 
