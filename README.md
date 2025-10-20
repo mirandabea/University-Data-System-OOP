@@ -1,10 +1,5 @@
 # University-Data-System-OOP
 Projeto de Desenvolvimento de Sistemas Orientado a Objetos focado na modelagem e gestão eficiente dos dados acadêmicos e administrativos de uma grande instituição de ensino superior.
-# Sistema de Dados Universitários POO
-
-Projeto de Desenvolvimento de Sistemas Orientado a Objetos focado na modelagem e gestão eficiente de dados acadêmicos e administrativos de uma grande instituição de ensino superior.
-
----
 
 ## 1. Introdução e Visão Geral da Solução (PI - Fase 1)
 
