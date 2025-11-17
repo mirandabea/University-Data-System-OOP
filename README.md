@@ -96,6 +96,6 @@ O diagrama de classes ilustra a estrutura das entidades envolvidas no sistema de
 
 ---
 
-## 5. Próximos Passos (Fase 2: Prototipação e Configuração do GitHub)
+## 5. Fase 2: Prototipação.
 
-Esta seção será preenchida na segunda entrega do PI, conforme os requisitos de prototipação das interfaces e a organização dos colaboradores no repositório.
+**[Visualizar o Protótipo Completo em PDF (10 Páginas)](./Sistema%20Universitário%20-%20Protótipo%20Fase%202.pdf)** ```
