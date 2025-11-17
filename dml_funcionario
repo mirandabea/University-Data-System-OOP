@@ -1,0 +1,5 @@
+INSERT INTO Pessoa (endereco, telefone, email, login, senha) VALUES
+('Rua dos Funcionários, 100', '81999998888', 'funcionario@univ.edu.br', 'func.rh', 'senha_func_hash');
+
+INSERT INTO Pessoa_Fisica (pessoa_id, cpf, rg, nome, dataNascimento, sexo, estadoCivil) VALUES
+(1, '111.111.111-11', '1111111', 'João da Silva (Funcionário)', '1985-06-20', 'M', 'Solteiro');
