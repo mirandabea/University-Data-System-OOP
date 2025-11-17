@@ -98,4 +98,4 @@ O diagrama de classes ilustra a estrutura das entidades envolvidas no sistema de
 
 ## 5. Fase 2: Prototipação.
 
-**[Visualizar o Protótipo Completo em PDF (10 Páginas)](./Sistema%20Universitário%20-%20Protótipo%20Fase%202.pdf)** ```
+**[Visualizar o Protótipo Completo em PDF (10 Páginas)](./Sistema%20Universitário%20-%20Protótipo%20Fase%202.pdf)**
